@@ -1,0 +1,20 @@
+.GoodsItem {
+  display: flex;
+  margin-bottom: 10px;
+}
+.GoodsItem > div:not(:last-child) {
+  width: 40%;
+}
+.GoodsItem > div:nth-child(2) {
+  text-align: right;
+}
+.GoodsItem > div:last-child {
+  margin: 0 auto;
+}
+.GoodsItem button {
+  padding: 5px 10px;
+  color: white;
+  background-color: cadetblue;
+  outline: none;
+  border-radius: 5px;
+}

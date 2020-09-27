@@ -1,0 +1,8 @@
+.GoodsList details {
+  margin-bottom: 30px;
+}
+.GoodsList summary {
+  background-color: bisque;
+  margin-bottom: 10px;
+  outline: none;
+}
