@@ -1,0 +1,8 @@
+.GoodsGroupe details {
+  margin-bottom: 30px;
+}
+.GoodsGroupe summary {
+  background-color: bisque;
+  margin-bottom: 10px;
+  outline: none;
+}

@@ -1,34 +1,18 @@
 import React from 'react';
 import styles from './GoodsList.module.css';
-import data from '../../json/data.json';
-import names from '../../json/names.json';
-import GoodsItem from '../GoodsItem';
+import GoodsGroupe from '../GoodsGroupe';
 
 const GoodsList = (props) => {
-  const { groupeID } = props;
+  const { goods, goodsGroups, addToCart } = props;
 
-  const groupeArr = Object.entries(names).filter((el) => +el[0] === groupeID);
-  const groupeNames = groupeArr.map((el) => el[1].G);
-
-  const itemsArr = data.Value.Goods.filter((el) => el.G === groupeID);
-  const items = itemsArr.map((item, index) => {
-    return (
-      <GoodsItem
-        key={index}
-        price={item.C}
-        groupeID={item.G}
-        goodsID={item.T}
-        goodsCount={item.P}
-      />
-    );
+  const items = goodsGroups.map((item, index) => {
+    return <GoodsGroupe key={index} groupeID={item} goods={goods} addToCart={addToCart} />;
   });
 
   return (
     <div className={`GoodsList ${styles.GoodsList}`}>
-      <details open>
-        <summary>{groupeNames}</summary>
-        {items}
-      </details>
+      <h1>Список товаров</h1>
+      {items}
     </div>
   );
 };
