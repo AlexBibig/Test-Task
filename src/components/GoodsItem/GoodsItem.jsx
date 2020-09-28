@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './GoodsItem.module.css';
-import names from '../../js_part/names.json';
+import names from '../../json/names.json';
 
 const GoodsItem = (props) => {
   const { price, goodsID } = props;
@@ -13,6 +13,7 @@ const GoodsItem = (props) => {
   const name = obj[goodsID]['N'];
   let rubleCourse = 70;
   let rublePrice = (price * rubleCourse).toFixed(1);
+
   return (
     <div className={`GoodsItem ${styles.GoodsItem}`}>
       <div className='position_name'>{name}</div>
