@@ -6,6 +6,7 @@ const GoodsItem = (props) => {
   const { item, addToCart } = props;
   const price = item.C;
   const goodsID = item.T;
+  const goodsCount = item.P;
 
   let namesArr = Object.values(names).map((el) => el.B);
   const obj = {};
@@ -14,15 +15,17 @@ const GoodsItem = (props) => {
   });
   const name = obj[goodsID]['N'];
 
-  let rubleCourse = 70;
+  let rubleCourse = 2;
   let rublePrice = +(price * rubleCourse).toFixed(1);
 
   return (
     <div className={`GoodsItem ${styles.GoodsItem}`}>
       <div className='position_name'>{name}</div>
-      <div className='position_price'>{rublePrice}</div>
+      <div className='position_price'>
+        {rublePrice} <span>руб.</span>
+      </div>
       <div className='btns-block'>
-        <button className='add_to_cart' onClick={() => addToCart(item, name, rublePrice)}>
+        <button className='add_to_cart' onClick={() => addToCart(item, name, rublePrice, goodsCount)}>
           В корзину
         </button>
       </div>

@@ -1,0 +1,48 @@
+.cartsHeader {
+  margin-bottom: 20px;
+}
+
+.cartsItems ul {
+  list-style: none;
+}
+.cartsItems li {
+  margin-bottom: 10px;
+  display: flex;
+}
+.cartsItems li > div:not(:last-child) {
+  width: 25%;
+}
+.cartsItems li > div {
+  text-align: right;
+}
+.cartsItems li > div:first-child {
+  text-align: left;
+}
+.cartsItems li > div:last-child {
+  margin: 0 auto;
+}
+.goodsRemainderMarker {
+  display: none;
+  margin-right: 10px;
+}
+.few {
+  display: inline-block;
+  color: red;
+}
+.cartsItems button {
+  padding: 5px 10px;
+  color: white;
+  background-color: tomato;
+  outline: none;
+  border-radius: 5px;
+}
+.cartsCounter {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 150px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.cartsCounter span {
+  padding: 0 10px;
+}

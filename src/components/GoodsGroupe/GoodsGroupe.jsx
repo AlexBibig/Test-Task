@@ -11,17 +11,7 @@ const GoodsGroupe = (props) => {
 
   const itemsArr = goods.filter((el) => el.G === groupeID);
   const items = itemsArr.map((item, index) => {
-    return (
-      <GoodsItem
-        key={index}
-        item={item}
-        // price={item.C}
-        // groupeID={item.G}
-        // goodsID={item.T}
-        // goodsCount={item.P}
-        addToCart={addToCart}
-      />
-    );
+    return <GoodsItem key={index} item={item} addToCart={addToCart} />;
   });
 
   return (
